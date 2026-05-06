@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-black: #050505;
+  --color-brand-magenta: #FF00FF;
+  --color-brand-orange: #FF4E00;
+  --color-brand-dusk: #1A0D1E;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans antialiased selection:bg-brand-magenta selection:text-white overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .noise-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: noise 0.2s infinite;
+    opacity: .05;
+    visibility: visible;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  @keyframes noise {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-10 py-5 bg-brand-magenta text-white font-black uppercase tracking-[0.2em] transition-all hover:bg-white hover:text-brand-black active:scale-95 cursor-pointer relative overflow-hidden;
+  }
+  
+  .section-padding {
+    @apply py-32 px-6 max-w-7xl mx-auto w-full relative z-10;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-magenta via-brand-orange to-brand-magenta bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] bg-clip-text text-transparent;
+  }
+
+  @keyframes gradient {
+    to { background-position: 200% center; }
+  }
+}
