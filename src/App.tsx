@@ -65,7 +65,7 @@ export default function App() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-magenta transition-all group-hover:w-full" />
             </a>
           </div>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-brand-magenta text-white text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-brand-black transition-all shadow-[0_0_20px_rgba(255,0,255,0.3)]">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-brand-magenta text-white text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-brand-black transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,0,255,0.3)] btn-pulse">
             Join Now
           </a>
         </div>
@@ -113,7 +113,7 @@ export default function App() {
                   High-performance training for the ambitious. Discover a premium fitness environment designed for those who demand real results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary group shadow-[0_0_40px_rgba(255,0,255,0.2)]">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary group shadow-[0_0_40px_rgba(255,0,255,0.2)] btn-pulse">
                     Activate Membership
                     <ChevronRight className="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform" />
                   </a>
@@ -273,7 +273,7 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={`w-full py-6 text-center font-black uppercase tracking-[0.2em] text-sm transition-all shadow-xl ${plan.popular ? 'bg-brand-magenta text-white hover:bg-white hover:text-black' : 'bg-white text-black hover:bg-brand-magenta hover:text-white'}`}>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={`w-full py-6 text-center font-black uppercase tracking-[0.2em] text-sm transition-all shadow-xl hover:scale-[1.02] active:scale-[0.98] ${plan.popular ? 'bg-brand-magenta text-white hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]' : 'bg-white text-black hover:bg-brand-magenta hover:text-white hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]'}`}>
                   Join The Gym
                 </a>
               </motion.div>
@@ -355,7 +355,7 @@ export default function App() {
                   </div>
                </div>
                <div className="mt-16">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary w-full shadow-[0_20px_50px_rgba(255,0,255,0.2)]">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary w-full shadow-[0_20px_50px_rgba(255,0,255,0.2)] btn-pulse">
                     Contact Us
                   </a>
                </div>
